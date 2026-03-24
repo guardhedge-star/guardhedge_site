@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Guard Hedge</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&family=Raleway:wght@300&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { width: 100%; height: 100%; }
+    body {
+      background-color: #e8eaef;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 44px;
+      animation: rise 1.6s cubic-bezier(.22,1,.36,1) both;
+    }
+    @keyframes rise {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .logo-wrap {
+      width: 240px;
+      height: 240px;
+      filter: drop-shadow(0 14px 48px rgba(10,22,50,0.22)) drop-shadow(0 3px 10px rgba(10,22,50,0.12));
+    }
+    .tagline-block {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 14px;
+      animation: fadeUp 2.2s ease both;
+    }
+    @keyframes fadeUp {
+      from { opacity: 0; }
+      to   { opacity: 1; }
+    }
+    .divider {
+      width: 28px;
+      height: 1px;
+      background: #8a93a8;
+      opacity: 0.4;
+    }
+    .tagline {
+      font-family: 'Raleway', sans-serif;
+      font-weight: 300;
+      font-size: 9.5px;
+      letter-spacing: 0.3em;
+      color: #8a93a8;
+      text-align: center;
+      text-transform: uppercase;
+      line-height: 2;
+      max-width: 380px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <div class="logo-wrap">
+      <svg viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg" width="240" height="240">
+        <!-- Halo blanc -->
+        <circle cx="120" cy="120" r="118" fill="white" opacity="0.5"/>
+        <!-- Cercle navy -->
+        <circle cx="120" cy="120" r="113" fill="#0f2044"/>
+        <!-- Anneau intérieur -->
+        <circle cx="120" cy="120" r="105" fill="none" stroke="white" stroke-width="1" opacity="0.07"/>
+        <!-- GUARD HEDGE — taille réduite pour rester dans le cercle -->
+        <text
+          x="120"
+          y="126"
+          font-family="'Cormorant Garamond', Georgia, serif"
+          font-weight="700"
+          font-size="19"
+          letter-spacing="4"
+          fill="white"
+          text-anchor="middle"
+          dominant-baseline="middle"
+        >GUARD HEDGE</text>
+      </svg>
+    </div>
+
+    <div class="tagline-block">
+      <div class="divider"></div>
+      <p class="tagline">
+        The future of hedge funds is taking shape right now,<br>just be patient.
+      </p>
+    </div>
+
+  </div>
+</body>
+</html>
