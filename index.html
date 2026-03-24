@@ -14,6 +14,7 @@
       background-color: #e8eaef;
       display: flex;
       flex-direction: column;
+      /* Centrage parfait sur la page */
       align-items: center;
       justify-content: center;
       min-height: 100vh;
@@ -22,17 +23,12 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 44px;
+      /* L'animation s'applique maintenant directement au texte restant */
       animation: rise 1.6s cubic-bezier(.22,1,.36,1) both;
     }
     @keyframes rise {
       from { opacity: 0; transform: translateY(20px); }
       to   { opacity: 1; transform: translateY(0); }
-    }
-    .logo-wrap {
-      width: 240px;
-      height: 240px;
-      filter: drop-shadow(0 14px 48px rgba(10,22,50,0.22)) drop-shadow(0 3px 10px rgba(10,22,50,0.12));
     }
     .tagline-block {
       display: flex;
@@ -66,25 +62,6 @@
 </head>
 <body>
   <div class="container">
-
-    <div class="logo-wrap">
-      <svg viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg" width="240" height="240">
-        <circle cx="120" cy="120" r="118" fill="white" opacity="0.5"/>
-        <circle cx="120" cy="120" r="113" fill="#0f2044"/>
-        <circle cx="120" cy="120" r="105" fill="none" stroke="white" stroke-width="1" opacity="0.07"/>
-        <text
-          x="120"
-          y="126"
-          font-family="'Cormorant Garamond', Georgia, serif"
-          font-weight="700"
-          font-size="19"
-          letter-spacing="4"
-          fill="white"
-          text-anchor="middle"
-          dominant-baseline="middle"
-        >GUARD HEDGE</text>
-      </svg>
-    </div>
 
     <div class="tagline-block">
       <div class="divider"></div>
